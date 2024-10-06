@@ -1,0 +1,47 @@
+.card-container { 
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space cards evenly */
+  padding: 10px; /* Padding around the container */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+
+.card {
+  background: white; /* Card background */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  text-align: center; /* Center text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  margin: 5px; /* Margin between cards */
+  width: calc(30% - 10px); /* Adjusted width for 3 columns */
+  max-width: 400px; /* Optional: Set a max-width for larger screens */
+  height: 350px; /* Set a fixed height for the cards */
+}
+
+.card img {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Limit height of images */
+  object-fit: cover; /* Crop the image nicely */
+}
+
+.card h3 {
+  margin: 10px 0; /* Margin for heading */
+  padding: 0 10px; /* Padding for heading */
+  font-size: 18px; /* Set font size to medium */
+  font-weight: bold; /* Optional: Make it bold */
+  color: #333; /* Optional: Change color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: calc(45% - 10px); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 10px); /* Single column on very small screens */
+  }
+}
